@@ -33,7 +33,10 @@ If you are not using the CLI, follow the steps in the section [Installing Withou
 
 #JavaScript Usage
 In your 'deviceready' handler, set up your Analytics tracker:
-* `window.analytics.startTrackerWithId('UA-XXXX-YY')` where UA-XXXX-YY is your Google Analytics Mobile App property
+* `window.analytics.startTrackerWithId('UA-XXXX-YY'[, allowIDFA])` where UA-XXXX-YY is your Google Analytics Mobile App property. There is an optional argument for allowIDFA which is a boolean and only applies for iOS. Please see: https://developers.google.com/analytics/devguides/collection/ios/v3/optional-features#idfa-files
+
+To enable IDFA tracking (iOS-only):
+* `window.analytics.allowIDFACollection()`. This enables IDFA collection on iOS devices. By default IDFA collection is disabled. For more info please see: https://developers.google.com/analytics/devguides/collection/ios/v3/optional-features#idfa-files
 
 To track a Screen (PageView):
 * `window.analytics.trackView('Screen Title')`

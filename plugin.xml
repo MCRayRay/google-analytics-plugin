@@ -40,6 +40,8 @@
     <framework src="CoreData.framework" />
     <framework src="libz.dylib" />
     <framework src="libsqlite3.dylib" />
+    <framework src="ios/libAdIdAccess.a" custom="true" />
+    <framework src="AdSupport.framework" />
   </platform>
 
   <platform name="android">

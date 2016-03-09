@@ -13,6 +13,10 @@ UniversalAnalyticsPlugin.prototype.debugMode = function(success, error) {
   cordova.exec(success, error, 'UniversalAnalytics', 'debugMode', []);
 };
 
+UniversalAnalyticsPlugin.prototype.allowIDFACollection = function(success, error) {
+  cordova.exec(success, error, 'UniversalAnalytics', 'allowIDFACollection', []);
+};
+
 UniversalAnalyticsPlugin.prototype.trackView = function(screen, success, error) {
   cordova.exec(success, error, 'UniversalAnalytics', 'trackView', [screen]);
 };

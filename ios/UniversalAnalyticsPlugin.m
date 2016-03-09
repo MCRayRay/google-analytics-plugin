@@ -49,6 +49,13 @@
   [[GAI sharedInstance].logger setLogLevel:kGAILogLevelVerbose];
 }
 
+- (void) allowIDFACollection: (CDVInvokedUrlCommand*) command
+{
+  id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+
+  tracker.allowIDFACollection = YES;
+}
+
 - (void) setUserId: (CDVInvokedUrlCommand*)command
 {
   CDVPluginResult* pluginResult = nil;
